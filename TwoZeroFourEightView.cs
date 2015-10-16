@@ -32,7 +32,7 @@ namespace twozerofoureight
             UpdateScore(((TwoZeroFourEightModel)m).GetScore());
         }
         public void UpdateScore(int score)
-        {//022
+        {
             lblScore.Text = "Score : " + score.ToString();
         }
         private void UpdateTile(Label l, int i)
