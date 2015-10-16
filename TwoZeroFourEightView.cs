@@ -14,7 +14,8 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
-       
+        public int score = 2;
+
         public TwoZeroFourEightView()
         {
             InitializeComponent();
@@ -28,8 +29,12 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
+            UpdateScore(((TwoZeroFourEightModel)m).GetScore());
         }
-
+        public void UpdateScore(int score)
+        {//022
+            lblScore.Text = "Score : " + score.ToString();
+        }
         private void UpdateTile(Label l, int i)
         {
             if (i != 0)
